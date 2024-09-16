@@ -1,0 +1,13 @@
+<div class="json-viewer">
+  <!-- Card para as informações formatadas -->
+  <nz-card nzTitle="Info" style="margin-bottom: 16px;">
+    <div *ngFor="let key of objectKeys(jsonData)">
+      <p><strong>{{ key }}:</strong> {{ formatValue(jsonData[key]) }}</p>
+    </div>
+  </nz-card>
+
+  <!-- Card para o JSON bruto -->
+  <nz-card nzTitle="JSON">
+    <pre>{{ jsonData | json }}</pre>
+  </nz-card>
+</div>

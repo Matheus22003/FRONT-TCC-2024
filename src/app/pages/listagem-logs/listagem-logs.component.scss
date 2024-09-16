@@ -1,0 +1,55 @@
+.circle-red {
+  width: 50px; /* Largura do círculo */
+  height: 50px; /* Altura do círculo */
+  background-color: red; /* Cor de fundo vermelha */
+  border-radius: 50%; /* Bordas arredondadas para fazer o círculo */
+}
+
+.circle-green {
+  width: 50px; /* Largura do círculo */
+  height: 50px; /* Altura do círculo */
+  background-color: green; /* Cor de fundo vermelha */
+  border-radius: 50%; /* Bordas arredondadas para fazer o círculo */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  cursor: pointer;
+  position: relative;
+}
+
+.arrow {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.asc::after {
+  content: '⬆️';
+}
+
+.desc::after {
+  content: '⬇️';
+}
+
+/* Alterando a cor da linha ao passar o mouse */
+tr:hover {
+  background-color: #f5f5f5;  /* Cor de fundo ao passar o mouse */
+  cursor: pointer;            /* Mudança do cursor para pointer */
+}
+
+/* Estilo adicional para alterar a cor do texto na linha ao passar o mouse */
+tr:hover td {
+  color: #333;  /* Alterar a cor do texto */
+}

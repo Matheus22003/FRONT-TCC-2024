@@ -21,7 +21,7 @@ export class JsonViewerComponent {
   objectKeys = Object.keys;
 
   // Função para formatar valores
-  formatValue(value: any): string {
+  public formatValue(value: any): string {
     if (Array.isArray(value)) {
       return value.join(', ');
     } else if (typeof value === 'object') {

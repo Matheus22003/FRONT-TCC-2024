@@ -2,71 +2,40 @@
   <div class="card" style="width: 18rem;">
     <div class="card-body mt-3">
       <div class="row">
-        <h5 class="card-title col-6">Tempo médio transação</h5>
+        <h5 class="card-title col-6">Quantidade de dados encapsulados</h5>
         <div class="col-6">
           <div class="circle-green mx-auto"></div>
         </div>
 
       </div>
-      <h6 class="card-subtitle mb-2 text-body-secondary h1">0.3s</h6>
-      <p class="card-text">-2.65% mais lento que o usual</p>
+      <h6 class="card-subtitle mb-2 text-body-secondary h1">{{dadosEncapsulados}}</h6>
     </div>
   </div>
 
   <div class="card" style="width: 18rem;">
     <div class="card-body mt-3">
       <div class="row">
-        <h5 class="card-title col-6">Tempo médio transação</h5>
+        <h5 class="card-title col-6">Clientes com redundancia</h5>
         <div class="col-6">
           <div class="circle-red mx-auto"></div>
         </div>
 
       </div>
-      <h6 class="card-subtitle mb-2 text-body-secondary h1">0.3s</h6>
-      <p class="card-text">-2.65% mais lento que o usual</p>
+      <h6 class="card-subtitle mb-2 text-body-secondary h1">{{clientesCadastrados}}</h6>
     </div>
   </div>
 
   <div class="card" style="width: 18rem;">
     <div class="card-body mt-3">
       <div class="row">
-        <h5 class="card-title col-6">Tempo médio transação</h5>
+        <h5 class="card-title col-6">dados com redundância</h5>
         <div class="col-6">
           <div class="circle-green mx-auto"></div>
         </div>
 
       </div>
-      <h6 class="card-subtitle mb-2 text-body-secondary h1">0.3s</h6>
-      <p class="card-text">-2.65% mais lento que o usual</p>
+      <h6 class="card-subtitle mb-2 text-body-secondary h1">{{clientesComRedundancia}}</h6>
     </div>
   </div>
-</div>
-
-<div>
-  <table>
-    <thead>
-    <tr>
-      <th (click)="sortTable('id')">
-        Id Transação
-        <span [ngClass]="sortColumn === 'id' ? (sortDirection === 'asc' ? 'asc' : 'desc') : ''"></span>
-      </th>
-      <th (click)="sortTable('date')">
-        Data Transação
-        <span [ngClass]="sortColumn === 'date' ? (sortDirection === 'asc' ? 'asc' : 'desc') : ''"></span>
-      </th>
-      <th (click)="sortTable('body')">
-        Body Requisição
-        <span [ngClass]="sortColumn === 'body' ? (sortDirection === 'asc' ? 'asc' : 'desc') : ''"></span>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr (click)="clickOnRow(transaction)" *ngFor="let transaction of transactions">
-      <td>{{ transaction.id }}</td>
-      <td>{{ transaction.date }}</td>
-      <td>{{ transaction.body }}</td>
-    </tr>
-    </tbody>
-  </table>
 </div>
 
